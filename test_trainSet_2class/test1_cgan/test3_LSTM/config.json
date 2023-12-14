@@ -1,0 +1,48 @@
+{
+	"data": {
+		"filename": "",
+		"n_class": 2
+	},
+	"training": {
+		"epochs": "",
+		"batch_size": 32
+	},
+	"model": {
+		"name": "LSTM",
+		"loss": "mse",
+		"optimizer": "adam",
+		"save_dir": "saved_models",
+		"layers": [
+			{
+				"type": "lstm",
+				"neurons": 100,
+				"return_seq": true
+			},
+			{
+				"type": "dropout",
+				"rate": 0.7
+			},
+			{
+				"type": "lstm",
+				"neurons": 100,
+				"return_seq": true
+			},
+			{
+				"type": "lstm",
+				"neurons": 100,
+				"return_seq": true
+			},
+			{
+				"type": "dropout",
+				"rate": 0.7
+			},
+			{
+				"type": "flatten"
+			},
+			{
+				"type": "dense",
+				"activation": "softmax"
+			}
+		]
+	}
+}
