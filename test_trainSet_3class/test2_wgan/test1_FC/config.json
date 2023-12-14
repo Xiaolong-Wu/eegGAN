@@ -1,0 +1,48 @@
+{
+	"data": {
+		"filename": "",
+		"n_class": 3
+	},
+	"training": {
+		"epochs": "",
+		"batch_size": 32
+	},
+	"model": {
+		"name": "FC",
+		"loss": "mse",
+		"optimizer": "adam",
+		"save_dir": "saved_models",
+		"layers": [
+			{
+				"type": "flatten"
+			},
+			{
+				"type": "dense",
+				"neurons": 100,
+				"activation": "relu"
+			},
+			{
+				"type": "dropout",
+				"rate": 0.7
+			},
+			{
+				"type": "dense",
+				"neurons": 100,
+				"activation": "relu"
+			},
+			{
+				"type": "dense",
+				"neurons": 100,
+				"activation": "relu"
+			},
+			{
+				"type": "dropout",
+				"rate": 0.7
+			},
+			{
+				"type": "dense",
+				"activation": "softmax"
+			}
+		]
+	}
+}
