@@ -12,3 +12,7 @@ Finally, the Python code generates EEG features (folder test_gan) and distinguis
 The GANs in this code is referenced from OpenAI's work:
 
 https://github.com/Xiaolong-Wu/GAN
+
+And Transformer classifier is referenced from:
+
+https://github.com/Xiaolong-Wu/attention-is-all-you-need-pytorch
